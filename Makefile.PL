@@ -1,0 +1,11 @@
+use inc::Module::Install;
+name 'HTTP-Server-Simple-PSGI';
+all_from 'lib/HTTP/Server/Simple/PSGI.pm';
+readme_from 'lib/HTTP/Server/Simple/PSGI.pm';
+requires 'HTTP::Server::Simple', '0.41';
+test_requires 'Test::Requires';
+build_requires 'Test::More';
+auto_include_deps;
+author_tests('xt');
+auto_set_repository;
+WriteAll;
