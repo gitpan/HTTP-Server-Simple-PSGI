@@ -2,10 +2,9 @@ package HTTP::Server::Simple::PSGI;
 use strict;
 use warnings;
 use 5.008_001;
-our $VERSION = '0.11';
+our $VERSION = '0.12';
 
 use base qw/HTTP::Server::Simple::CGI/;
-use HTTP::Server::Simple;
 
 # copied from HTTP::Status
 my %StatusCode = (
@@ -94,6 +93,7 @@ sub handler {
         'psgi.run_once'     => 0,
         'psgi.streaming'    => 1,
         'psgi.nonblocking'  => 0,
+        'psgix.io'          => $self->stdio_handle,
     };
 
     while (my ($k, $v) = each %ENV) {
