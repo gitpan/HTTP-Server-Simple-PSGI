@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:               HTTP-Server-Simple-PSGI
-version:            0.13
+version:            0.14
 abstract:           ~
 author:  []
 license:            unknown
@@ -10,7 +10,7 @@ configure_requires:
 build_requires:
     ExtUtils::MakeMaker:  0
 requires:
-    HTTP::Server::Simple:  0.41
+    HTTP::Server::Simple:  0.42
 no_index:
     directory:
         - t
